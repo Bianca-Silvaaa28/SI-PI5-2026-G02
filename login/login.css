@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'The Seasons', serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #FEFAE0; 
+  text-align: center;
+}
+
+.header {
+  background-color: #FDF0D5;
+  text-align: center;
+  padding: 3px 0;
+}
+
+.header h1 {
+  font-size: 85px;
+  color: #C52B2B;
+  font-weight: normal;
+}
+
+.header p {
+  font-size: 35px;
+  color: #C52B2B;
+  margin-top: 10px;
+}
+
+.container {
+  flex-grow: 1;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  color: #C52B2B;
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+.input-group {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 15px 25px;
+  border-radius: 50px; /* Formato de pílula */
+  border: 1px solid #333;
+  background-color: white;
+  font-family: 'The Seasons', serif;
+  font-size: 18px;
+  outline: none;
+}
+
+/* Placeholder com a cor e fonte correta */
+input::placeholder {
+  color: #999;
+}
+
+.msg {
+  font-size: 18px;
+  margin-top: 5px;
+  height: 14px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.msg.valid { color: green; }
+.msg.invalid { color: red; }
+
+button {
+  margin-top: 40px;
+  padding: 18px 60px;
+  border: none;
+  border-radius: 25px; /* Menos arredondado que o input */
+  background-color: #C52B2B;
+  color: white;
+  font-family: 'The Seasons', serif;
+  font-size: 20px;
+  cursor: not-allowed;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+button.active {
+  cursor: pointer;
+  opacity: 1;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.link {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #C52B2B;
+}
+
+.link a {
+  color: #C52B2B;
+  text-decoration: underline;
+}
