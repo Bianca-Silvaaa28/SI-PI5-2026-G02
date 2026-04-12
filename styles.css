@@ -1,0 +1,102 @@
+/* Importando fontes locais */
+@font-face {
+  font-family: 'The Seasons';
+  src: url('./fonts/TheSeasons.ttf');
+}
+
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('./fonts/GlacialIndifference.ttf');
+}
+
+/* Reset */
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #FDF0D5;
+  text-align: center;
+  padding: 3px 0;
+}
+
+.header h1 { /*fonte de Dictum*/
+  font-family: 'The Seasons', serif;
+  font-size: 85px;
+  color: #C52B2B;
+  margin: 0;
+}
+
+.header p { /*fonte de "o que foi dito"*/
+  font-family: 'The Seasons', serif;
+  font-size: 35px;
+  color: #C52B2B;
+  margin-top: 5px;
+}
+
+/* Fundo principal */
+.container {
+  background-color: #FEFAE0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 200px; /*espaço entre o download do arquivo MP3/MP4 e o download do pdf*/
+  padding-top: 100px;
+}
+
+/* Card upload */
+.card {
+  background-color: #C52B2B;
+  color: white;
+  width: 260px;
+  height: 200px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  font-family: 'Glacial Indifference', sans-serif;
+  font-size: 20px; /*fonte do Arquivo MP3/MP4*/
+}
+
+.card input {
+  display: none;
+}
+
+.icon {
+  font-size: 45px;
+  color: white;
+}
+
+/* Download */
+.download-section {
+  text-align: center;
+  font-family: 'Glacial Indifference', sans-serif;
+}
+
+.download-section p {
+  font-size: 20px; /*fonte de "Anexe o arquivo para gerar o relatório pdf*/
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Botão */
+.btn {
+  background-color: #C52B2B;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-family: 'Glacial Indifference', sans-serif;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
