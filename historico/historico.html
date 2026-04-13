@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictum - Histórico</title>
+    <link rel="stylesheet" href="historico.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <h1 class="logo-text">Dictum</h1>
+            <span class="tagline">"o que foi dito"</span>
+        </div>
+        
+        <div class="nav-icons">
+            <a href="home.html" class="nav-btn" title="Gravar">
+                <div class="icon-mic">
+                    <div class="mic-top"></div>
+                    <div class="mic-u"></div>
+                    <div class="mic-base"></div>
+                </div>
+            </a>
+
+            <a href="historico.html" class="nav-btn active" title="Pastas">
+                <div class="icon-folder-menu">
+                    <div class="folder-tab-menu"></div>
+                </div>
+            </a>
+
+            <a href="perfil.html" class="nav-btn" title="Perfil">
+                <div class="icon-user-profile">
+                    <div class="user-head"></div>
+                    <div class="user-body"></div>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <div id="modal-pasta" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Nova Pasta</h3>
+            <input type="text" id="nome-pasta" placeholder="Digite o nome da pasta...">
+            <div class="modal-buttons">
+                <button id="btn-cancelar" class="btn-secundario">Cancelar</button>
+                <button id="btn-confirmar" class="btn-primario">Criar</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="grid-container" id="grid-pastas">
+            
+            <div class="item-card" id="abrir-modal">
+                <div class="add-button-circle">
+                    <span class="plus-sign">+</span>
+                </div>
+                <p class="label-red">Criar pasta</p>
+            </div>
+
+            <div class="item-card">
+                <div class="folder-main"><div class="folder-tab"></div></div>
+                <p class="label-red">Audiência 1235896</p>
+            </div>
+
+            <div class="item-card">
+                <div class="folder-main"><div class="folder-tab"></div></div>
+                <p class="label-red">Audiência 523679</p>
+            </div>
+
+            <div class="item-card">
+                <div class="file-icon-draw">
+                    <div class="file-fold"></div>
+                    <div class="file-lines"></div>
+                </div>
+                <p class="label-black">Transcrição audiência 256987</p>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="historico.js"></script>
+</body>
+</html>

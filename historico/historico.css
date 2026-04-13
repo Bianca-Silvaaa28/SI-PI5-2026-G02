@@ -1,0 +1,320 @@
+/* Configurações Gerais */
+:root {
+    --bg-creme: #FFF9E9;
+    --red-dictum: #C53A30;
+    --gray-file: #8E8E8E;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FEFAE0;
+}
+
+/* --- Header e Logo --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background-color: #FDF0D5;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.logo-text {
+    font-family: 'The Seasons', serif;
+    font-size: 3.2rem;
+    color: var(--red-dictum);
+    margin: 0;
+    font-weight: bold;
+}
+
+.tagline {
+    font-family: 'The Seasons', serif;
+    color: var(--red-dictum);
+    font-size: 1.4rem;
+    margin-left: 10px;
+}
+
+/* --- Ícones do Header (CSS Puro) --- */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+/* Microfone */
+.icon-mic {
+    width: 24px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mic-top {
+    width: 10px;
+    height: 18px;
+    background: var(--red-dictum);
+    border-radius: 10px;
+}
+.mic-u {
+    width: 18px;
+    height: 10px;
+    border: 2px solid var(--red-dictum);
+    border-top: 0;
+    border-radius: 0 0 10px 10px;
+    margin-top: 2px;
+}
+.mic-base {
+    width: 2px;
+    height: 4px;
+    background: var(--red-dictum);
+}
+
+/* Pasta Menu */
+.icon-folder-menu {
+    width: 28px;
+    height: 20px;
+    background: var(--red-dictum);
+    border-radius: 3px;
+    position: relative;
+}
+.folder-tab-menu {
+    width: 12px;
+    height: 6px;
+    background: var(--red-dictum);
+    position: absolute;
+    top: -4px;
+    left: 0;
+    border-radius: 2px 2px 0 0;
+}
+
+/* Perfil Usuário */
+.icon-user-profile {
+    width: 42px;
+    height: 42px;
+    border: 3px solid var(--red-dictum);
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.user-head {
+    width: 14px;
+    height: 14px;
+    background: var(--red-dictum);
+    border-radius: 50%;
+    margin: 6px auto 0;
+}
+.user-body {
+    width: 26px;
+    height: 16px;
+    background: var(--red-dictum);
+    border-radius: 15px 15px 0 0;
+    margin: 2px auto 0;
+}
+
+/* --- Grid de Conteúdo --- */
+.content {
+    padding: 60px 80px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 50px;
+}
+
+.item-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Botão Adicionar */
+.add-button-circle {
+    width: 65px;
+    height: 65px;
+    background-color: #FF5A5A;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.plus-sign {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Pasta Principal */
+.folder-main {
+    width: 110px;
+    height: 75px;
+    background-color: var(--red-dictum);
+    border-radius: 8px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.folder-tab {
+    width: 45px;
+    height: 12px;
+    background-color: var(--red-dictum);
+    position: absolute;
+    top: -8px;
+    left: 0;
+    border-radius: 6px 6px 0 0;
+}
+
+/* Ícone de Arquivo */
+.file-icon-draw {
+    width: 60px;
+    height: 80px;
+    background-color: var(--gray-file);
+    position: relative;
+    margin-bottom: 10px;
+    padding-top: 15px;
+}
+.file-fold {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 18px 18px 0;
+    border-color: transparent transparent var(--bg-creme) transparent;
+}
+.file-lines {
+    width: 40px;
+    height: 3px;
+    background: #E0E0E0;
+    margin: 10px auto;
+    box-shadow: 0 8px 0 #E0E0E0, 0 16px 0 #E0E0E0, 0 24px 0 #E0E0E0, 0 32px 0 #E0E0E0;
+}
+
+/* Legendas */
+.label-red {
+    color: var(--red-dictum);
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 8px;
+}
+
+.label-black {
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9rem;
+    max-width: 130px;
+}
+
+/* Interatividade */
+.item-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+/* Fundo escuro que cobre tudo */
+.modal-overlay {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #FDF0D5;
+    padding: 30px;
+    border-radius: 15px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 2px solid var(--red-dictum);
+}
+
+.modal-content h3 {
+    color: var(--red-dictum);
+    margin-top: 0;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-primario {
+    background-color: var(--red-dictum);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-secundario {
+    background-color: #8E8E8E;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Efeito de clique nos cards */
+.item-card:active {
+    transform: scale(0.95);
+}
+
+/* Remove estilos padrão de link e centraliza os ícones */
+.nav-btn {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s, transform 0.2s;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse */
+.nav-btn:hover {
+    opacity: 0.7;
+    transform: translateY(-2px);
+}
+
+/* Efeito ao clicar */
+.nav-btn:active {
+    transform: translateY(0);
+}
+
+/* Destaque para a página atual (opcional) */
+.nav-btn.active {
+    border-bottom: 2px solid var(--red-dictum);
+    padding-bottom: 5px;
+    cursor: default; /* Mostra que já está na página */
+}
+
+/* Garante que os ícones dentro do link herdem as cores se necessário */
+.nav-btn div {
+    pointer-events: none; /* Faz o clique passar direto para o link <a> */
+}
